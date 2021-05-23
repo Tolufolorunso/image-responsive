@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image gallery</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./life.css">
+</head>
+
+<body>
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="#">Cars</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">services</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <header>
+            <section class="navigation-section">
+                <nav class="navigation">
+                    <div class="logo">
+                        <h3>Tolu's Cars</h3>
+                    </div>
+
+                    <div class="hambuger">
+                        <div class="nav-icon">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li><a href="#">Cars</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">services</a></li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </section>
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1>Housing Estate for you</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium error voluptatum architecto, animi eos inventore?</p>
+                    <div class="hero-content__btn">
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <section class="gallery-section">
+            <div class="gallery-content">
+                <h3>Houses you will love</h3>
+                <div class="gallery-images__grid">
+                    <div class="image-item">
+                        <img src="./img/house1.jpg" alt="">
+                    </div>
+                    <div class="image-item">
+                        <img src="./img/house2.jpg" alt="">
+                    </div>
+                    <div class="image-item">
+                        <img src="./img/house1.jpg" alt="">
+                    </div>
+                    <div class="image-item">
+                        <img src="./img/house4.jpg" alt="">
+                    </div>
+                    <div class="image-item">
+                        <img src="./img/house1.jpg" alt="">
+                    </div>
+                    <div class="image-item">
+                        <img src="./img/house6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>&copy; 2021. Designed and coded by <a href="https://twitter.com/developer_tolu" target="_blank">@developer_tolu</a></p>
+        </footer>
+    </div>
+
+    <script>
+        const menu = document.querySelector('.hambuger')
+        const mobileNav = document.querySelector('.mobile-nav')
+
+        menu.addEventListener('click', (e) => {
+            mobileNav.classList.toggle('open')
+            e.stopPropagation()
+        })
+        document.body.addEventListener('click', (e) => {
+            mobileNav.classList.remove('open')
+            e.stopPropagation()
+        })
+    </script>
+</body>
+
+</html>

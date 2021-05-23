@@ -1,0 +1,343 @@
+:root {
+    --color_primary: tomato;
+    --color_primary-hover: rgb(155, 35, 14);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./img//house7.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.navigation-section {
+    /* background-color: var(--color_primary); */
+    padding: 10px 0;
+}
+
+.navigation {
+    width: 100%;
+    max-width: calc(1200px - 30px);
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hambuger {
+    display: none;
+}
+
+.nav-icon {
+    width: 30px;
+}
+
+.nav-icon .fas {
+    width: 100%;
+    color: var(--color_primary);
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-icon .fas:hover {
+    color: var(--color_primary);
+}
+
+.mobile-nav {
+    position: absolute;
+    transform: translate(-300px, 0);
+    transition: transform 0.3s ease;
+    background-color: white;
+    max-width: 230px;
+    height: 100%;
+    width: 70%;
+}
+
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+}
+
+.mobile-nav ul li {
+    width: 100%;
+}
+
+.mobile-nav ul a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 30px;
+    color: var(--color_primary);
+    transition: all 0.3s ease;
+}
+
+.mobile-nav ul a:hover {
+    background-color: var(--color_primary);
+    color: #fff;
+    text-decoration: underline;
+}
+
+.mobile-nav.open {
+    transform: translate(0, 0);
+}
+
+@media (max-width: 850px) {
+    header {
+        height: 80vh;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        height: 60vh;
+    }
+    .navigation {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .nav {
+        display: none;
+    }
+    .hambuger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.logo h3 {
+    font-size: 3.5vw;
+    color: var(--color_primary);
+    font-family: cursive;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0 20px;
+}
+
+
+/* .nav ul li {
+    margin-left: 20px;
+} */
+
+.nav a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.4s ease;
+}
+
+.nav li:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .nav a {
+        font-size: 1.6rem;
+    }
+}
+
+.hero-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    row-gap: 15px;
+}
+
+.hero-content h1 {
+    font-weight: 300;
+    font-size: 4rem;
+    color: #fff;
+    letter-spacing: 1.3px;
+}
+
+.hero-content p {
+    font-weight: 300;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.hero-content .hero-content__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.hero-content__btn a {
+    background: var(--color_primary);
+    text-decoration: none;
+    color: #bcc3c7;
+    font-size: 1.8rem;
+    padding: 10px 30px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    transition: all 0.3 ease;
+}
+
+.hero-content__btn a:hover {
+    background: var(--color_primary-hover);
+    color: #fff;
+}
+
+@media (max-width: 650px) {
+    .hero-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .hero-content {
+        row-gap: 8px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+}
+
+.gallery-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-content {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.gallery-content h3 {
+    font-size: 4vw;
+    color: var(--color_primary);
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.gallery-images__grid {
+    width: 100%;
+    max-width: calc(1200px - 30px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.image-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .gallery-images__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .gallery-images__grid {
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.footer {
+    width: 100%;
+    margin-top: 30px;
+    height: 40px;
+    text-align: center;
+    background: #304353;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--color_primary);
+    font-weight: 600;
+    font-style: italic;
+    transition: all 0.3 ease;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
+
+@media (max-width: 450px) {
+    .footer p {
+        font-size: 1.5rem;
+    }
+}
